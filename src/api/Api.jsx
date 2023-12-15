@@ -3,7 +3,7 @@ import {
   useState
 } from "react";
 import axios from "axios";
-import Moviecard from "./Moviecard"
+import Moviecard from "../components/Moviecard"
 // import { Link } from "react-router-dom";
 
 function Api() {

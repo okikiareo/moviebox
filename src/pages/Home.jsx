@@ -8,7 +8,7 @@ import imdb from "../assets/imdb.svg";
 import search from "../assets/search.svg"
 import play from "../assets/play.png"
 import Api from "../api/Api";
-import Moviebox from "../component/Moviebox";
+import Moviebox from "../components/Moviebox";
 
 
 const Home = ({ }) => {
