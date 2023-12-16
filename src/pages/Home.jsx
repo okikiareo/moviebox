@@ -25,24 +25,28 @@ const Home = ({ }) => {
                 <div className="inner">
                     <div className="header flex">
                         <div className="logo flex">
-                            <img src={tv} alt="" /> <h2>MovieBox</h2>
+                            <img src={tv} alt="" /> 
+                            <h2>MovieBox</h2>
                         </div>
                         <form onSubmit={searchMovie}>
-                            <div className="search flex">
-                                <input type="text" onChange={(e) => setSearchKey(e.target.value)} id="input1" placeholder="What do you want to watch?" />
-                                <button type={"submit"}>
+                            <div className="search desktop flex">
+                                <input type="text" placeholder="What do you want to watch?" />
+                                <button className="flex" type={"submit"}>
                                     <img src={search} />
                                 </button>
                             </div>
                         </form>
                         {/* {searchKey} */}
-                        <div className="sign">
-                            <h3>Sign in</h3>   <img src={menu} />
+                        <div className="sign flex">
+                            <a>Sign in</a>
+                            <img src={menu} />
                         </div>
                     </div>
-                    <div className="search mobile">
+                    <div className="search mobile flex">
                         <input type="text" id="input1" placeholder="What do you want to watch?" />
-                        <img src={search} />
+                        <button className="flex" type={"submit"}>
+                                    <img src={search} />
+                                </button>
                     </div>
                     <div className="header-info">
                         <h3>John Wick 3: <br></br> Parabellum</h3>
