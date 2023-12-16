@@ -36,17 +36,17 @@ const Home = ({ }) => {
                             </div>
                         </form>
                         {/* {searchKey} */}
-                        <div className="sign flex">
+                        <div className="sign">
                             <h3>Sign in</h3>   <img src={menu} />
                         </div>
                     </div>
-                    <div className="search mobile flex">
+                    <div className="search mobile">
                         <input type="text" id="input1" placeholder="What do you want to watch?" />
                         <img src={search} />
                     </div>
                     <div className="header-info">
                         <h3>John Wick 3: <br></br> Parabellum</h3>
-                        <div className="two-icons flex">
+                        <div className="two-icons">
                             <div className="idm-icon">
                                 <img src={imdb} /> 86.0/100
        </div>
