@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 
-import tv from "../assets/logo.svg";
+import tv from "../assets/tv.png";
 import menu from "../assets/Menu.svg";
 import apple from "../assets/tomato.svg";
 import imdb from "../assets/imdb.svg";
