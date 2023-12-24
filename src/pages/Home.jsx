@@ -8,7 +8,7 @@ import imdb from "../assets/imdb.svg";
 import search from "../assets/search.svg"
 import play from "../assets/play.png"
 import Api from "../api/Api";
-// import Moviebox from "./Moviebox";
+import Moviebox from "../component/Moviebox";
 
 
 const Home = ({ }) => {
@@ -76,7 +76,7 @@ const Home = ({ }) => {
                 </div>
             </div>
              <Api />
-          { /* <Moviebox /> */}
+        <Moviebox />
         </>
     )
 }
