@@ -7,7 +7,7 @@ import apple from "../assets/tomato.svg";
 import imdb from "../assets/imdb.svg";
 import search from "../assets/search.svg"
 import play from "../assets/play.png"
-// import Api from "./Api";
+import Api from "../api/Api";
 // import Moviebox from "./Moviebox";
 
 
@@ -75,8 +75,8 @@ const Home = ({ }) => {
                     </div>
                 </div>
             </div>
-            {/* <Api />
-            <Moviebox /> */}
+             <Api />
+          { /* <Moviebox /> */}
         </>
     )
 }
