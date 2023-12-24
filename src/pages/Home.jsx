@@ -50,7 +50,7 @@ const Home = ({ }) => {
                     </div>
                     <div className="header-info">
                         <h3>John Wick 3: <br></br> Parabellum</h3>
-                        <div className="two-icons">
+                        <div className="two-icons flex">
                             <div className="idm-icon">
                                 <img src={imdb} /> 86.0/100
        </div>
@@ -63,9 +63,15 @@ const Home = ({ }) => {
                             assassins' guild, and with a $14 million price tag
                             on his head, he is the target of hit men and women everywhere.
        </div>
-                        <a className="play" to="">
-                            <img src={play} /> WATCH TRAILER
-       </a>
+       <div>
+           
+                    <a className="play flex" to="">
+                            <img src={play} /> <span> WATCH TRAILER</span>
+       </a> 
+         
+            
+       </div>
+                 
                     </div>
                 </div>
             </div>
