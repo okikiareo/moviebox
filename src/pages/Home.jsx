@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 
-// import tv from "./images/tv.png";
-// import menu from "./images/Menu.png";
-// import apple from "./images/apple.png";
-// import imdb from "./images/imdb.png";
-// import search from "./images/search.svg"
-// import play from "./images/play.png"
-import Api from "./Api";
-import Moviebox from "./Moviebox";
+import tv from "../assets/logo.svg";
+import menu from "../assets/Menu.svg";
+import apple from "../assets/tomato.svg";
+import imdb from "../assets/imdb.svg";
+import search from "../assets/search.svg"
+import play from "../assets/play.png"
+// import Api from "./Api";
+// import Moviebox from "./Moviebox";
 
 
 const Home = ({ }) => {
@@ -65,8 +65,8 @@ const Home = ({ }) => {
                     </div>
                 </div>
             </div>
-            <Api />
-            <Moviebox />
+            {/* <Api />
+            <Moviebox /> */}
         </>
     )
 }
