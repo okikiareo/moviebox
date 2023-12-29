@@ -15,16 +15,34 @@
 
 .slide-inner {
     display: flex;
+    max-width: 1000px;
+    transition: transform 500ms;
    
 }
 
 .slide-arrow {
     position: absolute;
-    padding: 2rem;
-    background: red;
-    
+    padding: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 5000;
 }
 
+.slide-arrow-left {
+    left: 1rem; 
+}
+
+.slide-arrow-right {
+    right: 1rem;
+}
+.slide-arrow-left, .slide-arrow-right{
+    background-color: rgba(197, 197, 197, 0.6);
+    border-radius: 50%;
+}
+.slide-arrow-left:hover, .slide-arrow-right:hover{
+ background-color: rgba(116, 116, 116, 0.8);;
+}
 .slide-inner > a {
     min-width: 300px;
     margin-right: 1em;
@@ -47,12 +65,9 @@
 .imdb img{
     margin-right: .7rem;
 }
-/* .movie-card-details{
-    display: flex;
-} */
-/* SLIDE */
-
-
+.vote{
+    margin-right: .5rem;
+}
 
 /* MEDIA QUERY */
 @media(max-width: 700px){

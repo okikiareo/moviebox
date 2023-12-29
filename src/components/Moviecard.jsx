@@ -23,7 +23,7 @@ const Moviecard = ({ movie }) => {
                 <div className="rate flex">
                     <div className="imdb flex"><img src={imdb} />
                      <p>{movie.vote_average}/10</p></div>
-                    <div><img src={apple} /></div>
+                    <div className="flex"> <p className="vote">{movie.vote_count}</p><img src={apple} /></div>
                 </div>
                 <p>{movie.genre}</p>
             </div>

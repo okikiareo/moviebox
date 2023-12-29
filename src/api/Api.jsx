@@ -11,6 +11,9 @@ import right from "../assets/right.svg"
 function Api() {
   const api_url = "https://api.themoviedb.org/3/";
   const [movies, setMovies] = useState([])
+  const [slider, setSlider] = useState({
+    count: 0
+  })
 
   const fetchMovies = async () => {
     const {
@@ -32,23 +35,36 @@ function Api() {
       />
     ))
   )
+
+  const handleSlider = (type) => {
+    if (type === "next") {
+      setSlider(prevCount => {
+        return { count: prevCount.count + 1}
+      });
+    } else {
+      if (slider.count < 0) { return }
+      setSlider(prevCount => {
+        return { count: prevCount.count - 1}
+      });
+    }
+    console.log(slider)
+    console.log(movie)
+  }
   return (
     <div className="container">
       <div className="test">
         <h2> Featured Movie </h2>
         <div className="slide">
-          <div className="slide-inner">
+          <div style={{ transform: `translateX(-${slider.count * 100}%)`}} className="slide-inner">
             {renderMovies()}
           </div>
-        </div>
-        <div className="arrows">
-            <div className="slide-arrow">
-              <img src={left} alt="" />
-            </div>
-            <div className="slide-arrow">
-              <img src={right} alt="" />
-            </div>
+          <div onClick={() => handleSlider("prev")} className="slide-arrow slide-arrow-left">
+            <img src={left} alt="" />
           </div>
+          <div onClick={() => handleSlider("next")} className="slide-arrow slide-arrow-right">
+            <img src={right} alt="" />
+          </div>
+        </div>
       </div>
 
     </div>
