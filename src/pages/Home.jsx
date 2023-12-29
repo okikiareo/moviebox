@@ -76,7 +76,7 @@ const Home = ({ }) => {
 
                     </div>
                 </div>
-                <div className="menu" id="menus-card">
+                {/* <div className="menu" id="menus-card">
                     <ul>
                         <li className=" flex"><img src={tv} alt="" />
                             <h2>MovieBox</h2>
@@ -85,7 +85,7 @@ const Home = ({ }) => {
                         <li> <img src={projector} alt="" /> <h2>MovieBox</h2> </li>
                         <li></li>
                     </ul>
-                </div>
+                </div> */}
             </div>
             <Api />
             <Moviebox />

@@ -9,7 +9,7 @@ const Moviecard = ({ movie }) => {
     console.log(movie)
     return (
 
-        <Link to={`/movies/${movie.id}`}>
+        <Link to={`../pages/movies/${movie.id}`}>
             <div className="movie-card" data-testid="movie-card">
                 {movie.poster_path ? <img src={`${image_path}${movie.poster_path}`} className="movie-cover" data-testid="movie-poster" alt="movie poster" />
                     : null
