@@ -23,19 +23,26 @@ function Api() {
     fetchMovies()
   }, [])
   const renderMovies = () => (
-    movies.map(movie => ( 
-      <Moviecard 
+    movies.map(movie => (
+      <Moviecard
         key={movie.id}
         movie={movie}
       />
     ))
   )
-  return ( 
+  return (
     <div className="container">
-      <div className="con-flex">
-        <h2> Featured Movie </h2> 
-        <div className="box"> {renderMovies()} </div> 
-      </div> 
+      <div className="">
+        <h2> Featured Movie </h2>
+        <div className="slide">
+          <div className="slide-inner">
+            {renderMovies()}
+          </div>
+
+          <div className="slide-arrow"></div>
+          <div className="slide-arrow"></div>
+        </div>
+      </div>
     </div>
   )
 }

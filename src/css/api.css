@@ -1,0 +1,38 @@
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 4rem auto;
+}
+.container h2{
+    margin-bottom: 2rem;
+}
+.slide {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-inner {
+    display: flex;
+}
+
+.slide-arrow {
+    position: absolute;
+}
+
+.slide-inner > a {
+    min-width: 400px;
+    margin-right: 1em;
+}
+.slide-inner .movie-card > img {
+    width: 100%;
+    object-fit: contain;
+}
+
+/* MEDIA QUERY */
+@media(max-width: 700px){
+    .slide-inner > a{
+        min-width: 400px;
+}
+}
