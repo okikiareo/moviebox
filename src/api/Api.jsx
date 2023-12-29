@@ -4,6 +4,8 @@ import {
 } from "react";
 import axios from "axios";
 import Moviecard from "../components/Moviecard"
+import left from "../assets/left.svg"
+import right from "../assets/right.svg"
 // import { Link } from "react-router-dom";
 
 function Api() {
@@ -32,17 +34,23 @@ function Api() {
   )
   return (
     <div className="container">
-      <div className="">
+      <div className="test">
         <h2> Featured Movie </h2>
         <div className="slide">
           <div className="slide-inner">
             {renderMovies()}
           </div>
-
-          <div className="slide-arrow"></div>
-          <div className="slide-arrow"></div>
         </div>
+        <div className="arrows">
+            <div className="slide-arrow">
+              <img src={left} alt="" />
+            </div>
+            <div className="slide-arrow">
+              <img src={right} alt="" />
+            </div>
+          </div>
       </div>
+
     </div>
   )
 }

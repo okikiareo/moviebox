@@ -15,24 +15,48 @@
 
 .slide-inner {
     display: flex;
+   
 }
 
 .slide-arrow {
     position: absolute;
+    padding: 2rem;
+    background: red;
+    
 }
 
 .slide-inner > a {
-    min-width: 400px;
+    min-width: 300px;
     margin-right: 1em;
 }
 .slide-inner .movie-card > img {
     width: 100%;
     object-fit: contain;
 }
+.title, .rate  {
+    color: #000;
+    margin-top: .4rem
+}
+.date{
+    color:#444444;
+    margin: 1rem 0;
+}
+.rate{
+    justify-content: space-between;
+}
+.imdb img{
+    margin-right: .7rem;
+}
+/* .movie-card-details{
+    display: flex;
+} */
+/* SLIDE */
+
+
 
 /* MEDIA QUERY */
 @media(max-width: 700px){
     .slide-inner > a{
-        min-width: 400px;
+        min-width: 200px;
 }
 }

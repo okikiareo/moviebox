@@ -20,10 +20,12 @@ const Moviecard = ({ movie }) => {
                 <h4 className="title" data-testid="movie-title">
                     {movie.title}
                 </h4>
-                <div className="rate flexx">
-                    <div className="imdb flexx"><img src={imdb} /> <p>{movie.vote_average}/10</p></div>
+                <div className="rate flex">
+                    <div className="imdb flex"><img src={imdb} />
+                     <p>{movie.vote_average}/10</p></div>
                     <div><img src={apple} /></div>
                 </div>
+                <p>{movie.genre}</p>
             </div>
         </Link>
 
