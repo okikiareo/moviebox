@@ -160,30 +160,35 @@ form {
     gap: 1rem; 
 }
 .movie-btn{
-    margin-bottom: 2rem;
+    margin: 1.5rem 1rem;
 }
 
-.movie-btn li {
+.movie-btn {
     margin-bottom: 2rem;
 }
 .sub-menu{
     width: 100%;
     color: #5c5c5c;
     display: flex;
-    /* align-items: center; */
+  margin: 1.5rem 0;
     justify-content: center;
 }
-
+.pushin{
+    margin-left: -1rem;
+}
 .join {
     width: 70%;
 }
 .cur-page{
     color: #BE123C;
     background:  #e9ccd4;
+    padding: 1rem 0;
+    border-right:4px solid #BE123C;;
 }
 .play-quiz{
+    color: #474747;
     padding: .8rem;
-    margin-top: 2rem;
+    margin: 2rem 1rem 0 1rem;
     border: 1px solid #d67f93;
     border-radius: 1rem;
     background-color: #fff7f9;
@@ -194,12 +199,13 @@ form {
     margin-bottom: .6rem;
 }
 .cur-play{
-    margin-bottom: 1rem;
+    margin-bottom: .6rem;
     font-size: .8rem;
 }
 .start-playing{
 font-weight: 600;
 font-size: .8rem;
+/* display: block; */
 padding: .4rem .8rem;
 border-radius: 4rem;
 background: #e9ccd4;

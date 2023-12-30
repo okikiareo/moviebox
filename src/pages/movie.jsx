@@ -19,7 +19,7 @@ function Movie() {
          .then(movie => setMovie(movie))
    }, []);
    return (
-      <div >
+      <div className="flex">
          <div className="menu" id="menus-card">
             <ul>
                <li className="movie-btn flex"> <img src={tv} alt="" />
@@ -61,14 +61,21 @@ function Movie() {
                   <p className="cur-play">50k people are playing right now</p>
                   <Link href="" className="start-playing">start playing</Link>
                </div>
-               <li><Link className="sub-menu flex"><img src={logout} alt="" /> <h4>Logout</h4>  </Link> </li>
+               <li><Link className="sub-menu pushin flex"><img src={logout} alt="" />
+                <h4>Logout</h4>  </Link> </li>
             </ul>
          </div>
-         <div>
+         <div className="trailer">
+          <div>
+            video
+          </div>
+           <div>
             {movie.title}
             {movie.vote_average}
             {id}
          </div>
+         </div>
+        
       </div>
    );
 }
