@@ -143,16 +143,17 @@ form {
     margin-bottom: 1rem;
 }
 
-/* MENU  */
-/* .menu{
+/* Movie Page */
+.menu{
     background-color: #ffffff;
-    position: absolute;
+    /* position: absolute; */
     right: 0;
     top: 0;
     color: #000;
-    z-index: 6000;
+    /* z-index: 6000; */
 
-} */
+}
+
 
 /* MEDIA QUERY */
 @media (max-width: 48em) {

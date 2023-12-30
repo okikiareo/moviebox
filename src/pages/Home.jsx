@@ -7,8 +7,6 @@ import apple from "../assets/tomato.svg";
 import imdb from "../assets/imdb.svg";
 import search from "../assets/search.svg"
 import play from "../assets/play.png"
-import home from "../assets/home.svg"
-import projector from "../assets/projector.svg"
 import Api from "../api/Api";
 import Moviebox from "../components/Moviebox";
 
@@ -76,16 +74,7 @@ const Home = ({ }) => {
 
                     </div>
                 </div>
-                {/* <div className="menu" id="menus-card">
-                    <ul>
-                        <li className=" flex"><img src={tv} alt="" />
-                            <h2>MovieBox</h2>
-                        </li>
-                        <li> <img src={home} alt="" /> <h2>Home</h2> </li>
-                        <li> <img src={projector} alt="" /> <h2>MovieBox</h2> </li>
-                        <li></li>
-                    </ul>
-                </div> */}
+                
             </div>
             <Api />
             <Moviebox />
