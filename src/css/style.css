@@ -146,12 +146,64 @@ form {
 /* Movie Page */
 .menu{
     background-color: #ffffff;
-    /* position: absolute; */
+    width: 12rem;
+    height: 95vh;
     right: 0;
     top: 0;
     color: #000;
-    /* z-index: 6000; */
+    /* padding: 2rem 1rem; */
+    border: 1px solid #a0a0a0;
+    border-top-right-radius:2rem;
+    border-bottom-right-radius:2rem ;
+}
+.menu .flex{
+    gap: 1rem; 
+}
+.movie-btn{
+    margin-bottom: 2rem;
+}
 
+.movie-btn li {
+    margin-bottom: 2rem;
+}
+.sub-menu{
+    width: 100%;
+    color: #5c5c5c;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.join {
+    width: 70%;
+}
+.cur-page{
+    color: #BE123C;
+    background:  #e9ccd4;
+}
+.play-quiz{
+    padding: .8rem;
+    margin-top: 2rem;
+    border: 1px solid #d67f93;
+    border-radius: 1rem;
+    background-color: #fff7f9;
+}
+.play-quiz p:first-child {
+    font-weight: 600;
+    font-size: .9rem;
+    margin-bottom: .6rem;
+}
+.cur-play{
+    margin-bottom: 1rem;
+    font-size: .8rem;
+}
+.start-playing{
+font-weight: 600;
+font-size: .8rem;
+padding: .4rem .8rem;
+border-radius: 4rem;
+background: #e9ccd4;
+color: #BE123C;
 }
 
 
