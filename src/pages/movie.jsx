@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import YouTube from "react-youtube";
 import home from "../assets/home.svg"
 import projector from "../assets/projector.svg"
 import tv from "../assets/tv.png";
@@ -18,6 +19,12 @@ function Movie() {
          .then(data => data.json())
          .then(movie => setMovie(movie))
    }, []);
+
+   const api_url = "https://api.themoviedb.org/3/";
+   const fetchmovie = async (id) => {
+      const { data } = await axios.get(`${api_url}/${id}`)
+   }
+
    return (
       <div className="flex">
          <div className="menu" id="menus-card">
@@ -26,7 +33,7 @@ function Movie() {
                   <h3>MovieBox</h3>
                </li>
                <li>
-                  <Link className="sub-menu flex">
+                  <Link className="sub-menu flex" to="/">
                      <div className="join flex">
                         <img src={home} alt="" />
                         <h4>Home</h4>
@@ -62,20 +69,22 @@ function Movie() {
                   <Link href="" className="start-playing">start playing</Link>
                </div>
                <li><Link className="sub-menu pushin flex"><img src={logout} alt="" />
-                <h4>Logout</h4>  </Link> </li>
+                  <h4>Logout</h4>  </Link> </li>
             </ul>
          </div>
          <div className="trailer">
-          <div>
-            video
-          </div>
-           <div>
-            {movie.title}
-            {movie.vote_average}
-            {id}
+            <div>
+               video
+               <YouTube
+
+               />
+            </div>
+            <div>
+
+               {id}
+            </div>
          </div>
-         </div>
-        
+
       </div>
    );
 }
