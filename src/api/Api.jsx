@@ -14,6 +14,8 @@ function Api() {
   const [slider, setSlider] = useState({
     count: 0
   })
+  const [selectedMovie, setSelectedMovie] = useState([]);
+
 
   const fetchMovies = async () => {
     const {
@@ -32,6 +34,7 @@ function Api() {
       <Moviecard
         key={movie.id}
         movie={movie}
+        selectMovie={setSelectedMovie}
       />
     ))
   )

@@ -14,6 +14,7 @@ function Movie() {
    const { id } = useParams();
 
    const [movie, setMovie] = useState([]);
+
    useEffect(() => {
       fetch("https://api.themoviedb.org/3/find/")
          .then(data => data.json())
@@ -22,9 +23,14 @@ function Movie() {
 
    const api_url = "https://api.themoviedb.org/3/";
    const fetchmovie = async (id) => {
-      const { data } = await axios.get(`${api_url}/${id}`)
+      const { data } = await axios.get(`${api_url}/${id}/discover/movie?api_key=d0f00c652a0ec5b927f52935e6ac4e46&sort_by=popularity.desc&language=en-US&page=1`)
+   return data;
    }
 
+   const selectMovie = (id) => {
+      const movie = fetchmovie(id)
+      setSelectedMovie(movie)
+    }
    return (
       <div className="flex">
          <div className="menu" id="menus-card">
