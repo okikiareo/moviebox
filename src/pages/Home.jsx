@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import React from "react";
 // import { Link } from "react-router-dom";
-
+import wic from "../assets/wic.mp4"
 import tv from "../assets/tv.png";
 import menu from "../assets/Menu.svg";
 import apple from "../assets/tomato.svg";
@@ -22,6 +23,9 @@ const Home = ({ }) => {
     return (
         <>
             <div className="home">
+          
+<video src={wic} muted autoPlay loop/>
+
                 <div className="inner">
                     <div className="header flex">
                         <div className="logo flex">
@@ -49,7 +53,7 @@ const Home = ({ }) => {
                         </button>
                     </div>
                     <div className="header-info">
-                        <h3>John Wick 3: <br></br> Parabellum</h3>
+                        <h3>John Wick 4: <br></br> Parabellum</h3>
                         <div className="two-icons flex">
                             <div className="idm-icon">
                                 <img src={imdb} /> 86.0/100
