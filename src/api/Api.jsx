@@ -7,7 +7,7 @@ import Moviecard from "../components/Moviecard"
 import left from "../assets/left.svg"
 import right from "../assets/right.svg"
 // import { Link } from "react-router-dom";
-import search from "../assets/search.svg"
+import search from "../assets/searched.svg"
 
 function Api() {
   const api_url = "https://api.themoviedb.org/3/";
@@ -67,7 +67,8 @@ const searchMovie = (e) => {
   return (
     <div className="container">
       <div className="test">
-        <h2> Featured Movie </h2>
+        <div className="feature-box flex">
+           <h2> Featured Movie </h2>
         <form onSubmit={searchMovie}>
                             <div className="search desktop flex">
                                 <input type="text" placeholder="What do you want to watch?" onChange={(e) => setSearchKey(e.target.value)} />
@@ -76,12 +77,9 @@ const searchMovie = (e) => {
                                 </button>
                             </div>
                         </form>
-                        <div className="search mobile flex">
-                        <input type="text" id="input1" placeholder="What do you want to watch?" />
-                        <button className="flex" type={"submit"}>
-                            <img src={search} />
-                        </button>
-                    </div>
+        </div>
+       
+                       
         <div className="slide">
           <div style={{ transform: `translateX(-${slider.count * 100}%)`}} className="slide-inner">
             {renderMovies()}
