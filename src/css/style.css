@@ -286,9 +286,10 @@ align-items: start;
 .header{
     margin-bottom: .5em;
 }
-/* .mobile {
-    margin-bottom: 9rem;
-} */
+
+.imgnan{
+    height: 300px;
+}
 }
 @media(max-width: 450px) {
     .logo img {
@@ -351,3 +352,11 @@ align-items: start;
 font-size: .8rem;
 }
 }
+
+.movie-layout {
+    display: flex;
+    align-items: start;
+}
+
+
+
