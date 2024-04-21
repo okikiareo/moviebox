@@ -12,7 +12,7 @@ const Moviecard = ({ movie }) => {
         <Link to={`../pages/movies/${movie.id}`}>
             <div className="movie-card" data-testid="movie-card">
                 {movie.poster_path ? <img src={`${image_path}${movie.poster_path}`} className="movie-cover" data-testid="movie-poster" alt="movie poster" />
-                    : 
+                    :
                     <div className="imgnan"><img src={imgbreak} alt="" /> No image found</div>
                 }
                 <div>
@@ -23,14 +23,12 @@ const Moviecard = ({ movie }) => {
                 </h4>
                 <div className="rate flex">
                     <div className="imdb flex"><img src={imdb} />
-                     <p>{movie.vote_average}/10</p></div>
+                        <p>{movie.vote_average}/10</p></div>
                     <div className="flex"> <p className="vote">{movie.vote_count}</p><img src={apple} /></div>
                 </div>
                 <p>{movie.genre}</p>
             </div>
         </Link>
-
-
     )
 }
 export default Moviecard;

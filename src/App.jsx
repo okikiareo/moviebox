@@ -7,12 +7,13 @@ import {
 
 import Home from "./pages/Home";
 import Movie from "./pages/movie";
+import NotFound from "./pages/NotFound";
 import MovieLayout from "./layout/MovieLayout";
 // import MovieFooter from "./layout/FooterLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/">
+    <Route path="/" errorElement={<NotFound />}>
       <Route index element={<Home />} />
 
       <Route element={<MovieLayout />}>
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
         <Route path="/pages/tvseries" element={"Tv series"} />
         <Route path="/pages/upcoming" element={"Upcoming"} />
       </Route>
+      {/* <Route path="*" element={<NotFound />} /> */}
     </Route>
   )
 );

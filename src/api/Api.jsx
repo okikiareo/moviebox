@@ -17,23 +17,23 @@ function Api() {
   })
   const [selectedMovie, setSelectedMovie] = useState([]);
 
-// Test
-const [searchKey, setSearchKey] = useState("");
+  // Test
+  const [searchKey, setSearchKey] = useState("");
 
-const searchMovie = (e) => {
+  const searchMovie = (e) => {
     e.preventDefault()
     fetchMovies(searchKey)
-}
-// test
+  }
+  // test
   const fetchMovies = async (searchKey) => {
-    const type = searchKey ? "search" : "discover" 
+    const type = searchKey ? "search" : "discover"
 
     const {
       data: {
         results
       }
     } = await axios.get(`${api_url}/${type}/movie?api_key=d0f00c652a0ec5b927f52935e6ac4e46&sort_by=popularity.desc&language=en-US&page=1&query=${searchKey}`)
-    
+
     setMovies(results)
     // console.log("DATA", data) 
   }
@@ -53,12 +53,12 @@ const searchMovie = (e) => {
   const handleSlider = (type) => {
     if (type === "next") {
       setSlider(prevCount => {
-        return { count: prevCount.count + 1}
+        return { count: prevCount.count + 1 }
       });
     } else {
       if (slider.count < 0) { return }
       setSlider(prevCount => {
-        return { count: prevCount.count - 1}
+        return { count: prevCount.count - 1 }
       });
     }
     console.log(slider)
@@ -68,20 +68,20 @@ const searchMovie = (e) => {
     <div className="container">
       <div className="test">
         <div className="feature-box flex">
-           <h2> Featured Movie </h2>
-        <form onSubmit={searchMovie}>
-                            <div className="search desktop flex">
-                                <input type="text" placeholder="What do you want to watch?" onChange={(e) => setSearchKey(e.target.value)} />
-                                <button className="flex" type={"submit"}>
-                                    <img src={search} />
-                                </button>
-                            </div>
-                        </form>
+          <h2> Featured Movie </h2>
+          <form onSubmit={searchMovie}>
+            <div className="search desktop flex">
+              <input type="text" placeholder="What do you want to watch?" onChange={(e) => setSearchKey(e.target.value)} />
+              <button className="flex" type={"submit"}>
+                <img src={search} />
+              </button>
+            </div>
+          </form>
         </div>
-       
-                       
+
+
         <div className="slide">
-          <div style={{ transform: `translateX(-${slider.count * 100}%)`}} className="slide-inner">
+          <div style={{ transform: `translateX(-${slider.count * 100}%)` }} className="slide-inner">
             {renderMovies()}
           </div>
           <div onClick={() => handleSlider("prev")} className="slide-arrow slide-arrow-left">

@@ -171,9 +171,6 @@ form ::placeholder{
 .imgnan img{
     margin-right: .3rem;
 }
-/* .mobile {
-    margin-bottom: 1rem;
-} */
 
 /* Movie Page */
 .menu{
@@ -238,14 +235,22 @@ form ::placeholder{
 .start-playing{
 font-weight: 600;
 font-size: .7rem;
-/* display: block; */
 padding: .4rem .8rem;
 border-radius: 4rem;
 background: #e9ccd4;
 color: #BE123C;
 }
-
-
+.trailer{
+/* max-width: 800px;  */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 2rem;
+}
+.youtube_container{
+    width: 100rem
+}
 /* MEDIA QUERY */
 
 @media (min-width: 750px) {

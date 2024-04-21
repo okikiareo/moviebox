@@ -21,6 +21,11 @@ function Movie() {
             const trailer = response.results.find(movie => (
                movie.name === "Official Trailer"
             ));
+            if (!trailer) {
+               const trailer = response.results[0];
+               setTrailer({ trailer })
+               return;
+            }
             setTrailer(trailer);
          })
          .catch(err => console.error(err));
@@ -34,6 +39,7 @@ function Movie() {
          <YouTube
             videoId={trailer.key}
             className="trailer-video"
+            containerClassName={"youtube_container"}
             opts={{
                playerVars: {
                   autoplay: 1,
