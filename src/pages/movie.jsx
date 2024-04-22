@@ -35,18 +35,25 @@ function Movie() {
 
    return (
       <div className="trailer">
-         <h2 className="trailer-title">Video</h2>
-         <YouTube
+         
+         <div className="youtube-container">
+            <YouTube
             videoId={trailer.key}
             className="trailer-video"
-            containerClassName={"youtube_container"}
+            containerClassName={"youtube"}
             opts={{
+               width: '100%',
+               height: "100%",
                playerVars: {
                   autoplay: 1,
-                  controls: 0
+                  controls: 0, 
+                  modestbranding: 0,
+                  rel: 0
                }
             }}
          />
+         </div>
+         
       </div>
    );
 }
