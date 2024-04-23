@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
+import star from "../assets/star.svg"
 
 function Movie() {
    const { id } = useParams();
@@ -63,12 +64,20 @@ function Movie() {
          />
          </div>
          <div className="trailer_infos">
-            <div className="trail_head">
-               <h4>{state}</h4>
-               
-               <h4></h4>
-               <h4></h4>
-               <p></p>
+            <div className="trail_head flex">
+              <div className="head_first flex">
+               <h4>{state.title}</h4>
+               <h4>{state.release_date}</h4>
+               {/* <h4>{state.genres}</h4>
+               <h4> </h4> */}
+              </div>
+               <div className="vote flex">
+                  <img src={star} />
+                  <p>{state.vote_average}</p>
+               </div>
+            </div>
+            <div className="trail_body">
+               <p>{state.overview}</p>
                <p></p>
             </div>
          </div>

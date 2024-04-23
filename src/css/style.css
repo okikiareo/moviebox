@@ -12,6 +12,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+:root{
+ --grey: #474747;
+
+}
 a {
     text-decoration: none;
 }
@@ -242,7 +246,7 @@ color: #BE123C;
 }
 .trailer{
 width: 100%;
-padding: .5rem;
+padding: 1rem;
 }
 .youtube-container{
     height: 80vh;
@@ -255,7 +259,28 @@ padding: .5rem;
     height: 100%; 
     border-radius: 1.5rem;
 }
-
+/* Trailer infos */
+.trailer_infos{
+    margin-top: 1.2rem;
+    color: var(--grey);
+}
+.trail_head{
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.head_first{
+    gap: 1rem;
+}
+.vote{
+    gap: .5rem;
+    padding-right: 1rem;
+}
+.vote p{
+    font-weight: 500;
+}
+.vote img{
+    width: 1.1rem;
+}
 /* MEDIA QUERY */
 
 @media (min-width: 750px) {
