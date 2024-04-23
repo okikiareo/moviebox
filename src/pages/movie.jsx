@@ -31,8 +31,17 @@ function Movie() {
          .catch(err => console.error(err));
    }, []);
 
-   console.log(trailer)
-
+   // movie data
+   const[state, setState]=useState([])
+        
+   useEffect(()=> {
+         
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=d0f00c652a0ec5b927f52935e6ac4e46&sort_by=popularity.desc&language=en-US&page=1`)
+    .then(data => data.json())
+    .then(movie => {console.log(movie); setState(movie)})  
+   },  []) 
+   // console.log(trailer)
+   console.log(state)
    return (
       <div className="trailer">
          
@@ -53,7 +62,16 @@ function Movie() {
             }}
          />
          </div>
-         
+         <div className="trailer_infos">
+            <div className="trail_head">
+               <h4>{state}</h4>
+               
+               <h4></h4>
+               <h4></h4>
+               <p></p>
+               <p></p>
+            </div>
+         </div>
       </div>
    );
 }
