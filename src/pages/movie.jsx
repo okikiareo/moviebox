@@ -6,6 +6,7 @@ import star from "../assets/star.svg"
 function Movie() {
    const { id } = useParams();
    const [trailer, setTrailer] = useState({});
+   const [state, setState] = useState([])
 
    useEffect(() => {
       const options = {
@@ -33,44 +34,45 @@ function Movie() {
    }, []);
 
    // movie data
-   const[state, setState]=useState([])
-        
-   useEffect(()=> {
-         
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=d0f00c652a0ec5b927f52935e6ac4e46&sort_by=popularity.desc&language=en-US&page=1`)
-    .then(data => data.json())
-    .then(movie => {console.log(movie); setState(movie)})  
-   },  []) 
+
+
+   useEffect(() => {
+
+      fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=d0f00c652a0ec5b927f52935e6ac4e46&sort_by=popularity.desc&language=en-US&page=1`)
+         .then(data => data.json())
+         .then(movie => { console.log(movie); setState(movie) })
+   }, [])
    // console.log(trailer)
    console.log(state)
+
    return (
       <div className="trailer">
-         
+
          <div className="youtube-container">
             <YouTube
-            videoId={trailer.key}
-            className="trailer-video"
-            containerClassName={"youtube"}
-            opts={{
-               width: '100%',
-               height: "100%",
-               playerVars: {
-                  autoplay: 1,
-                  controls: 0, 
-                  modestbranding: 0,
-                  rel: 0
-               }
-            }}
-         />
+               videoId={trailer.key}
+               className="trailer-video"
+               containerClassName={"youtube"}
+               opts={{
+                  width: '100%',
+                  height: "100%",
+                  playerVars: {
+                     // autoplay: 1,
+                     controls: 0,
+                     modestbranding: 0,
+                     rel: 0
+                  }
+               }}
+            />
          </div>
          <div className="trailer_infos">
             <div className="trail_head flex">
-              <div className="head_first flex">
-               <h4>{state.title}</h4>
-               <h4>{state.release_date}</h4>
-               {/* <h4>{state.genres}</h4>
+               <div className="head_first flex">
+                  <h4>{state.title}</h4>
+                  <h4>{state.release_date}</h4>
+                  {/* <h4>{state.genres}</h4>
                <h4> </h4> */}
-              </div>
+               </div>
                <div className="vote flex">
                   <img src={star} />
                   <p>{state.vote_average}</p>
@@ -78,7 +80,13 @@ function Movie() {
             </div>
             <div className="trail_body">
                <p>{state.overview}</p>
-               <p></p>
+               <p className="" >
+                  {trailer.genres.map(genre => {
+                     return (<p key={genre.id} className="">
+                        {genre.name}
+                     </p>)
+                  })}
+               </p>
             </div>
          </div>
       </div>
