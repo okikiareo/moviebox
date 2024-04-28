@@ -81,7 +81,8 @@ function Movie() {
             </div>
             <div className="trail_body flex">
                <div className="trailbody_first">
-               <p>{state.overview}</p>
+               <p><b>Overview:</b> {state.overview}</p>
+               <div className="tagline"> <span className="tag ">Tagline:</span> <span className="line">{state.tagline}</span></div>
                </div>
                {/* <p className="" >
                   {trailer.genres.map(genre => {
