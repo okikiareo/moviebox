@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import star from "../assets/star.svg"
+import link from "../assets/link.svg"
 
 function Movie() {
    const { id } = useParams();
@@ -69,7 +70,7 @@ function Movie() {
             <div className="trail_head flex">
                <div className="head_first flex">
                   <h4>{state.title}</h4>
-                  <h4>{state.release_date}</h4>
+                  <h4>Released on: {state.release_date}</h4>
                   {/* <h4>{state.genres}</h4>
                <h4> </h4> */}
                </div>
@@ -78,15 +79,21 @@ function Movie() {
                   <p>{state.vote_average}</p>
                </div>
             </div>
-            <div className="trail_body">
+            <div className="trail_body flex">
+               <div className="trailbody_first">
                <p>{state.overview}</p>
-               <p className="" >
+               </div>
+               {/* <p className="" >
                   {trailer.genres.map(genre => {
                      return (<p key={genre.id} className="">
                         {genre.name}
                      </p>)
                   })}
-               </p>
+               </p> */}
+               <div className="trailbody_second">
+<p className="stat"><span>Status: </span>{state.status}</p>
+<p className="hmpg"><a href={state.homepage} target="_blank" className="flex"><img src={link} alt="" /> Homepage</a></p>
+               </div>
             </div>
          </div>
       </div>

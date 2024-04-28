@@ -14,8 +14,12 @@ body {
 
 :root{
  --grey: #474747;
-
+ --blk: #000;
+ --wht: #fff;
+ --drkipnk: #BE123C;
+ --pink: #e9ccd4;
 }
+
 a {
     text-decoration: none;
 }
@@ -262,7 +266,7 @@ padding: 1rem;
 /* Trailer infos */
 .trailer_infos{
     margin-top: 1.2rem;
-    color: var(--grey);
+    /* color: var(--grey); */
 }
 .trail_head{
     justify-content: space-between;
@@ -281,13 +285,45 @@ padding: 1rem;
 .vote img{
     width: 1.1rem;
 }
-/* MEDIA QUERY */
-
-@media (min-width: 750px) {
-    /* .mobile {
-        display: none;
-    } */
+.trail_body{
+    gap: 2rem;
+    width: 100%;
+    align-items: flex-start;
 }
+.trailbody_first{
+flex-basis: 70%;
+}
+.trailbody_second{
+    flex-basis: 30%;
+    }
+.trailbody_second .stat{
+    padding: .7rem 0rem;
+    border-radius:.4rem ;
+    text-align: center;
+    background-color: var(--drkipnk);
+    color: var(--wht);
+    margin-bottom: .5rem;
+}
+.trailbody_second .hmpg{
+    padding: .7rem 0rem;
+    border: 1px solid var(--drkipnk);
+    text-align: center;
+    background-color: var(--pink);
+    color: var(--blk);
+    border-radius:.4rem ;
+}
+.trailbody_second a{
+    justify-content: center;
+    color: var(--blk)
+}
+.trailbody_second img{
+width: .9rem;
+margin-right: .5rem;
+}
+
+
+
+/* MEDIA QUERY */
 
 @media(max-width: 790px) {
     .logo img {
