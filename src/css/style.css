@@ -104,6 +104,8 @@ video {
 
 .logo img {
     margin-right: 1em;
+animation: rotate 4s linear infinite;
+
 }
 
 .feature-box {
@@ -146,7 +148,9 @@ form ::placeholder {
     margin-right: 1em;
     font-weight: 600;
 }
-
+.sign img{
+    animation: move 2s linear infinite;
+}
 .header-info {
     color: #ffffff;
     max-width: 22rem;
@@ -204,19 +208,29 @@ form ::placeholder {
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
     position: sticky;
+    transition: all .4s ease-in; 
+    
 }
-
+/* Try and Catch */
+.active{
+    transform: translateX(-200px);
+    /* display: none; */
+    width: 0;
+}
+/* Try and Catch */
 .menu .flex {
     gap: 1rem;
 }
 
 .movie-btn {
-    margin: 1.5rem 1rem;
+    margin: 1.5rem 1rem; 
+     margin-bottom: 2rem;
 }
 
-.movie-btn {
-    margin-bottom: 2rem;
-}
+/* .movie-btn img{
+animation: rotate 4s linear infinite;
+  
+} */
 
 .sub-menu {
     width: 100%;
@@ -240,7 +254,7 @@ form ::placeholder {
     background: #e9ccd4;
     padding: 1rem 0;
     border-right: 4px solid #BE123C;
-    ;
+    
 }
 
 .play-quiz {
@@ -275,6 +289,17 @@ form ::placeholder {
 .trailer {
     width: 100%;
     padding: 1rem;
+    position: relative;
+}
+.fixed-btn{
+position: fixed;
+z-index: 1000;
+bottom: 2%;
+left:50%;
+animation: rotate 4s linear infinite;
+}
+.fixed-btn img{
+    position:sticky;
 }
 
 .youtube-container {
@@ -382,6 +407,26 @@ form ::placeholder {
     border-bottom-right-radius: .4rem;
     font-weight: 500;
 }
+/* KEYFRAMES */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes move {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    50% {
+        transform: translateX(5px); /* Middle position */
+    }
+    100% {
+        transform: translateX(0); /* End position */
+    }
+}
 
 /* MEDIA QUERY */
 
@@ -419,12 +464,25 @@ form ::placeholder {
     }
 
     /* Movie */
-    .menu {
-        display: none;
-    }
-
     .trailer {
         padding: 0rem;
+        position: relative;
+    }
+    .menu {
+        /* display: none; */
+        z-index: 1000;
+        position: absolute;
+        width: 50%;
+        left: 0;
+        /* display: none; */
+        width: 0;
+        transform: translateX(-200px);
+    }
+    .active{
+        width: 60%;
+        display: block;
+        transform: translateX(0);
+
     }
 
     .youtube-container iframe {
@@ -485,9 +543,24 @@ form ::placeholder {
         padding: .6rem;
         font-size: .8rem;
     }
-    .menu {
+    /* .menu {
         transform: translateX(-12rem);
+    } */
+    .movie-btn img{
+        width: 2.5rem;
     }
+    .fixed-btn img{
+        width: 2.5rem;
+    }
+    .sub-menu img{
+width: 1.5rem;
+    }
+    .movie-btn h3{
+font-size: .9rem ;
+    }
+    .sub-menu h4{
+        font-size: .8rem ;
+            }
     .youtube-container {
         height:70vh
     }
@@ -542,6 +615,9 @@ form ::placeholder {
     .trailbody_second .hmpg{
         padding: .6rem 0rem;
     }
+    .active {
+        width: 80%;
+    }
 }
 
 @media(max-width: 300px) {
@@ -559,9 +635,6 @@ form ::placeholder {
 
     .search input {
         font-size: .8rem;
-    }
-    .tagline{
-
     }
     .tag {
         padding: .3rem;
@@ -581,6 +654,10 @@ form ::placeholder {
         border-bottom-right-radius: 0rem;
         font-weight: 400;
     }
+    .tagline {
+        display: flex;
+        flex-direction: column;
+}
 }
 .movie-layout {
     display: flex;

@@ -8,10 +8,19 @@ import cal from "../assets/calendar.png";
 import logout from "../assets/logout.svg";
 
 const MovieHeader = () => {
+
+    const btnEffect = () =>{
+    // const movieBtn = document.querySelector(".movie-btn");
+    const menu = document.querySelector(".menu");
+    // const fixBtn = document.querySelector(".fixed-btn");
+    menu.classList.toggle("active")
+}
+    
+
     return (
         <div className="menu" id="menus-card">
             <ul>
-                <li className="movie-btn flex"> <img src={tv} alt="" />
+                <li className="movie-btn flex" onClick={() => btnEffect()}> <img src={tv} alt="" />
                     <h3>MovieBox</h3>
                 </li>
                 <li>

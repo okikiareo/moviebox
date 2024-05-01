@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import star from "../assets/star.svg"
 import link from "../assets/link.svg"
+import tv from "../assets/tv.png";
 
 function Movie() {
    const { id } = useParams();
@@ -45,9 +46,17 @@ function Movie() {
    }, [])
    // console.log(trailer)
    console.log(state)
-
+   const btnEffect = () =>{
+      // const movieBtn = document.querySelector(".movie-btn");
+      const menu = document.querySelector(".menu");
+      // const fixBtn = document.querySelector(".fixed-btn");
+      menu.classList.toggle("active")
+  }
    return (
       <div className="trailer">
+         
+<div className="fixed-btn flex" onClick={() => btnEffect()}> <img src={tv} alt="" />
+                </div>
 
          <div className="youtube-container">
             <YouTube
