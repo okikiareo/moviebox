@@ -71,8 +71,6 @@ function Movie() {
                <div className="head_first flex">
                   <h4>{state.title}</h4>
                   <h4>Released on: {state.release_date}</h4>
-                  {/* <h4>{state.genres}</h4>
-               <h4> </h4> */}
                </div>
                <div className="vote flex">
                   <img src={star} />
@@ -81,8 +79,8 @@ function Movie() {
             </div>
             <div className="trail_body flex">
                <div className="trailbody_first">
-               <p><b>Overview:</b> {state.overview}</p>
-               <div className="tagline"> <span className="tag ">Tagline:</span> <span className="line">{state.tagline}</span></div>
+                  <p><b>Overview:</b> {state.overview}</p>
+                  <div className="tagline"> <span className="tag ">Tagline:</span> <span className="line">{state.tagline}</span></div>
                </div>
                {/* <p className="" >
                   {trailer.genres.map(genre => {
@@ -92,8 +90,8 @@ function Movie() {
                   })}
                </p> */}
                <div className="trailbody_second">
-<p className="stat"><span>Status: </span>{state.status}</p>
-<p className="hmpg"><a href={state.homepage} target="_blank" className="flex"><img src={link} alt="" /> Homepage</a></p>
+                  <p className="stat"><span>Status: </span>{state.status}</p>
+                  <p className="hmpg"><a href={state.homepage} target="_blank" className="flex"><img src={link} alt="" /> Homepage</a></p>
                </div>
             </div>
          </div>
