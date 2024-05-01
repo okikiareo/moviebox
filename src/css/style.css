@@ -488,12 +488,24 @@ form ::placeholder {
     .menu {
         transform: translateX(-12rem);
     }
-    .trailer_infos {
-        margin-top: 0rem;
+    .youtube-container {
+        height:70vh
     }
+    .trailer_infos {
+        margin-top: 1rem;
+    }
+    .vote {
+        padding-right: 0rem;
+    }
+    
     .head_first{
+        align-items: flex-start;
         flex-direction: column;
         gap: .2rem;
+        
+    }
+    .line{
+        padding-right: 2rem;
     }
 }
 
@@ -508,6 +520,27 @@ form ::placeholder {
 
     .logo {
         font-size: .6rem;
+    }
+    .trailer_infos {
+        padding: .5rem;
+    }
+    .head_first {
+        font-size: .9rem;
+    }
+    .vote p {
+        font-size: .9rem;
+    }
+    .trail_body{
+        font-size: .9rem;
+    }
+    .line{
+        padding-right: 1rem;
+    }
+    .trailbody_second .stat{
+        padding: .6rem 0rem;
+    }
+    .trailbody_second .hmpg{
+        padding: .6rem 0rem;
     }
 }
 
@@ -527,8 +560,28 @@ form ::placeholder {
     .search input {
         font-size: .8rem;
     }
-}
+    .tagline{
 
+    }
+    .tag {
+        padding: .3rem;
+        border-radius: 0rem;
+        background: var(--drkipnk);
+        color: var(--wht);
+    }
+    
+    .line {
+        border: 1px solid var(--grey);
+        border-left: none;
+        padding: .3rem;
+        padding-right: .5rem;
+        padding-left: .2rem;
+        margin-left: -.2rem;
+        border-top-right-radius: 0rem;
+        border-bottom-right-radius: 0rem;
+        font-weight: 400;
+    }
+}
 .movie-layout {
     display: flex;
     align-items: start;

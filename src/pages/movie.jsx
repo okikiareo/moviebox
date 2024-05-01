@@ -69,7 +69,7 @@ function Movie() {
          <div className="trailer_infos">
             <div className="trail_head flex">
                <div className="head_first flex">
-                  <h4>{state.title}</h4>
+                  <h4 className="title">{state.title}</h4>
                   <h4>Released on: {state.release_date}</h4>
                </div>
                <div className="vote flex">
