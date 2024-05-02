@@ -9,11 +9,11 @@ import Home from "./pages/Home";
 import Movie from "./pages/movie";
 import NotFound from "./pages/NotFound";
 import MovieLayout from "./layout/MovieLayout";
-// import MovieFooter from "./layout/FooterLayout";
+import Layout from "./layout/layout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" errorElement={<NotFound />}>
+    <Route path="/" element={<Layout/>} errorElement={<NotFound />}>
       <Route index element={<Home />} />
 
       <Route element={<MovieLayout />}>

@@ -61,7 +61,7 @@ const Home = ({ }) => {
             </div>
             <Api />
             <Moviebox />
-            <MovieFooter />
+            {/* <MovieFooter /> */}
 
         </>
     )

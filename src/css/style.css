@@ -285,6 +285,7 @@ form ::placeholder {
     width: 100%;
     padding: 1rem;
     position: relative;
+    margin-bottom:3rem ;
 }
 .fixed-btn{
 position: fixed;
@@ -601,6 +602,13 @@ font-size: .9rem ;
     .line{
         padding-right: 2rem;
     }
+    
+.footer_socials i{
+    font-size: 1.2rem;
+    }
+    .footer_socials img{
+       width: 1.1rem;
+        }
 }
 
 @media(max-width: 380px) {
@@ -639,6 +647,9 @@ font-size: .9rem ;
     .active {
         width: 80%;
     }
+    .footer_socials {
+        gap: 2.5rem;
+    }
 }
 
 @media(max-width: 300px) {
@@ -675,7 +686,9 @@ font-size: .9rem ;
         border-bottom-right-radius: 0rem;
         font-weight: 400;
     }
- 
+    .footer_socials {
+        gap: 2rem;
+    }
 }
 .movie-layout {
     display: flex;

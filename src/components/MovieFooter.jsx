@@ -1,11 +1,14 @@
 import x from "../assets/x-twitter.svg";
 
 const MovieFooter = () => {
+    // Ex Link
     const linkElement = document.createElement('link');
     linkElement.rel = 'stylesheet';
     linkElement.href = 'https://unicons.iconscout.com/release/v4.0.0/css/line.css';
     document.head.appendChild(linkElement);
 
+    // Year
+    
     return (
         <div className="movie-footer flex">
             <footer class="footer flex">
@@ -26,9 +29,9 @@ const MovieFooter = () => {
                         </a>
                     </div>
                     {/* </div> */}
-                <h4 class="footer_copy">
-                 &copy; <span id="current-year"></span> MovieBox by Ai_Okiki
-                </h4>
+                <div class="footer_copy">
+                 &copy; <span id="current-year">2024</span> MovieBox by Ai_Okiki
+                </div>
             {/* </div> */}
         </footer>
         </div>
