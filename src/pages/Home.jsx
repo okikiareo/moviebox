@@ -11,7 +11,7 @@ import play from "../assets/play.png"
 import Api from "../api/Api";
 import Moviebox from "../components/Moviebox";
 import axios from "axios";
-
+import MovieFooter from "../components/MovieFooter";
 
 const Home = ({ }) => {
     return (
@@ -61,6 +61,8 @@ const Home = ({ }) => {
             </div>
             <Api />
             <Moviebox />
+            <MovieFooter />
+
         </>
     )
 }
