@@ -11,6 +11,7 @@
             return(
                  <div>
                      {/* <img src={state.backdrop_path}/>
+sigh
                      <div>{state.title}</div> */}
                </div>
             )
