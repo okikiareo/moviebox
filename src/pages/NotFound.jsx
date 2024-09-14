@@ -1,7 +1,7 @@
 const NotFound = () => {
     return (
         <section className="">
-            Not Found from Not Found Component
+            OOPs sorry man not found!
         </section>
     );
 }
