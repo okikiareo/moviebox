@@ -6,7 +6,6 @@ import axios from "axios";
 import Moviecard from "../components/Moviecard"
 import left from "../assets/left.svg"
 import right from "../assets/right.svg"
-// import { Link } from "react-router-dom";
 import search from "../assets/searched.svg"
 
 function Api() {

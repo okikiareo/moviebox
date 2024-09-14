@@ -1,17 +1,13 @@
-import { useEffect, useState } from "react";
 import React from "react";
-// import { Link } from "react-router-dom";
 import wic from "../assets/wic.mp4"
 import tv from "../assets/tv.png";
 import menu from "../assets/Menu.svg";
 import apple from "../assets/tomato.svg";
 import imdb from "../assets/imdb.svg";
-import search from "../assets/search.svg"
 import play from "../assets/play.png"
 import Api from "../api/Api";
 import Moviebox from "../components/Moviebox";
-import axios from "axios";
-import MovieFooter from "../components/MovieFooter";
+
 
 
 const Home = ({ }) => {
