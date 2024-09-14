@@ -408,7 +408,10 @@ animation: rotate 4s linear infinite;
 /* FOoter */
 .movie-footer{
     justify-content: center;
-    margin-bottom:2rem ;
+    height: 40vh;
+    background:linear-gradient(#363636, #1a1a1a) ;
+
+    color: #e2e2e2;
 }
 .footer{
     flex-direction: column;
@@ -419,7 +422,7 @@ animation: rotate 4s linear infinite;
 }
 .footer_socials i{
 font-size: 1.6rem;
-color: var(--grey);
+color: var(--wht);
 }
 .footer_socials img{
    width: 1.5rem;

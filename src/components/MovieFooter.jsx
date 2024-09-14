@@ -12,8 +12,7 @@ const MovieFooter = () => {
     return (
         <div className="movie-footer flex">
             <footer class="footer flex">
-            {/* <div class="footer_bg"> */}
-                {/* <div class="footer_container container grid"> */}
+         
                     <div class="footer_socials flex">
                         <a href="https://github.com/okikiareo" target="_blank" class="footer_social">
                             <i class="uil uil-github"></i>
@@ -28,11 +27,11 @@ const MovieFooter = () => {
                             <i class="uil uil-linkedin"></i>
                         </a>
                     </div>
-                    {/* </div> */}
+                    
                 <div class="footer_copy">
                  &copy; <span id="current-year">2024</span> MovieBox by Ai_Okiki
                 </div>
-            {/* </div> */}
+            
         </footer>
         </div>
     );

@@ -10,9 +10,7 @@ import logout from "../assets/logout.svg";
 const MovieHeader = () => {
 
     const btnEffect = () =>{
-    // const movieBtn = document.querySelector(".movie-btn");
     const menu = document.querySelector(".menu");
-    // const fixBtn = document.querySelector(".fixed-btn");
     menu.classList.toggle("active")
 }
     
