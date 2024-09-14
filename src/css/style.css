@@ -13,6 +13,7 @@ body {
     ;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;  
 }
 
 :root {
@@ -39,8 +40,6 @@ input {
 input::placeholder {
     color: #ffffff;
 }
-
-
 .flex {
     display: flex;
     align-items: center;
@@ -179,8 +178,11 @@ form ::placeholder {
     background: #BE123C;
     border-radius: 7px;
     gap: .5rem;
+    color: var(--wht);
 }
-
+.play:hover {
+cursor: pointer;
+}
 .imgnan {
     height: 450px;
     max-height: 500px;

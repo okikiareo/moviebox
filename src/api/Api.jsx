@@ -10,7 +10,6 @@ import right from "../assets/right.svg"
 import search from "../assets/searched.svg"
 
 function Api() {
-  const api_url = "https://api.themoviedb.org/3/";
   const [movies, setMovies] = useState([])
   const [slider, setSlider] = useState({
     count: 0
@@ -25,18 +24,40 @@ function Api() {
     fetchMovies(searchKey)
   }
   // test
+  // import axios from 'axios';
+
+  // Ensure api_url is correctly set
+  const api_url = 'https://api.themoviedb.org/3';
+  const api_key = 'd0f00c652a0ec5b927f52935e6ac4e46'; 
+  
   const fetchMovies = async (searchKey) => {
-    const type = searchKey ? "search" : "discover"
-
-    const {
-      data: {
-        results
+      const type = searchKey ? "search" : "discover";
+      const url = `${api_url}/${type}/movie`;
+      
+      const params = {
+          api_key,
+          sort_by: 'popularity.desc',
+          language: 'en-US',
+          page: 1,
+          query: searchKey || '' 
+      };
+  
+      console.log('Fetching movies from URL:', url);
+      console.log('With params:', params);
+  
+      try {
+          const response = await axios.get(url, { params });
+          const { results } = response.data;
+  
+          console.log('API Response:', response.data); 
+          setMovies(results); 
+  
+      } catch (error) {
+          console.error('Error fetching movies:', error.response ? error.response.data : error.message);
+          
       }
-    } = await axios.get(`${api_url}/${type}/movie?api_key=d0f00c652a0ec5b927f52935e6ac4e46&sort_by=popularity.desc&language=en-US&page=1&query=${searchKey}`)
-
-    setMovies(results)
-    // console.log("DATA", data) 
-  }
+  };
+  
   useEffect(() => {
     fetchMovies()
   }, [])
@@ -65,7 +86,7 @@ function Api() {
     console.log(movie)
   }
   return (
-    <div className="container">
+    <div className="container"id="moviecard" >
       <div className="test">
         <div className="feature-box flex">
           <h2> Featured Movie </h2>

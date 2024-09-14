@@ -13,11 +13,11 @@ import Moviebox from "../components/Moviebox";
 import axios from "axios";
 import MovieFooter from "../components/MovieFooter";
 
+
 const Home = ({ }) => {
     return (
         <>
             <div className="home">
-
                 <video src={wic} muted autoPlay loop />
 
                 <div className="inner">
@@ -46,9 +46,9 @@ const Home = ({ }) => {
                             assassins' guild, and with a $14 million price tag
                             on his head, he is the target of hit men and women everywhere.
                         </div>
-                        <div>
+                        <div className="pay-btn"> 
 
-                            <a className="play flex" to="">
+                            <a className="play flex" href="#moviecard">
                                 <img src={play} /> <span> WATCH TRAILER</span>
                             </a>
 
