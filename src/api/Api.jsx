@@ -89,7 +89,7 @@ function Api() {
       <div className="test">
         <div className="feature-box flex">
           <h2> Featured Movie </h2>
-          <h5>Yes, now search a movie let's see!</h5>
+          <h5>Yes, now search a movie let's see!    </h5>
           <form onSubmit={searchMovie}>
             <div className="search desktop flex">
               <input type="text" placeholder="What do you want to watch?" onChange={(e) => setSearchKey(e.target.value)} />

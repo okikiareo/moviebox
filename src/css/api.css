@@ -14,9 +14,8 @@
     display: flex;
     max-width: 1000px;
     transition: transform 500ms;
-   
+    transition: transform 0.3s ease-in-out; 
 }
-
 .slide-arrow {
     position: absolute;
     padding: 1.5rem;

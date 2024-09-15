@@ -476,7 +476,7 @@ color: var(--wht);
     }
 
     .inner {
-        gap: 7rem;
+        gap: 8rem;
         display: flex;
         flex-direction: column;
     }
