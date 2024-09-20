@@ -35,7 +35,7 @@ const Home = ({ }) => {
                             <h2>MovieBox</h2>
                         </div>
                         <div className="sign flex" onClick={toggleMute}>
-                            <button>Listen</button>
+                            <button>Unmute</button>
                             <div className="sound flex">
                             <img src={isMuted ? mute : sound}/>
                             </div>
