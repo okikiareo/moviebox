@@ -142,13 +142,19 @@ form ::placeholder {
     justify-content: center;
 }
 
-.sign a {
+.sign button {
     color: #ffffff;
     margin-right: 1em;
     font-weight: 600;
 }
-.sign img{
+.sound{
+    background: #BE123C;
+    padding: .5rem;
+    border-radius: 50%;
     animation: move 2s linear infinite;
+}
+.sign img{
+    width: .9rem;
 }
 .header-info {
     color: #ffffff;

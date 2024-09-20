@@ -1,20 +1,32 @@
 import React from "react";
 import wic from "../assets/wic.mp4"
 import tv from "../assets/tv.png";
-import menu from "../assets/Menu.svg";
+import sound from "../assets/sound.svg";
+import mute from "../assets/mute.svg";
 import apple from "../assets/tomato.svg";
 import imdb from "../assets/imdb.svg";
 import play from "../assets/play.png"
 import Api from "../api/Api";
 import Moviebox from "../components/Moviebox";
-
+import { useState, useRef } from 'react';
 
 
 const Home = ({ }) => {
+
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef(null);
+
+  const toggleMute = () => {
+      if (videoRef.current) {
+          videoRef.current.muted = !videoRef.current.muted;  
+          setIsMuted(!isMuted);  
+      }
+  };
+
     return (
         <>
             <div className="home">
-                <video src={wic} muted autoPlay loop />
+                <video src={wic} ref={videoRef} autoPlay loop muted={isMuted} />
 
                 <div className="inner">
                     <div className="header flex">
@@ -22,9 +34,11 @@ const Home = ({ }) => {
                             <img src={tv} alt="" />
                             <h2>MovieBox</h2>
                         </div>
-                        <div className="sign flex">
-                            <a>Sign in</a>
-                            <img src={menu} />
+                        <div className="sign flex" onClick={toggleMute}>
+                            <button>Listen</button>
+                            <div className="sound flex">
+                            <img src={isMuted ? mute : sound}/>
+                            </div>
                         </div>
                     </div>
                     <div className="header-info">
@@ -45,7 +59,7 @@ const Home = ({ }) => {
                         <div className="pay-btn"> 
 
                             <a className="play flex" href="#moviecard">
-                                <img src={play} /> <span> WATCH TRAILER</span>
+                                <img src={play} /> <span> WATCH TRAILERS</span>
                             </a>
 
 
